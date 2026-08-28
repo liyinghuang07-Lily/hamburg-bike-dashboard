@@ -1,0 +1,21 @@
+# ---- Large input data: never committed (place locally under data/) ----
+data/*.csv
+data/*.geojson
+data/*.zip
+
+# Step-2 raw hourly export (~608 MB uncompressed), if it ever lands here
+hamburg_bike_counts_hourly.csv
+*_hamburg_bike_counts_hourly.csv
+
+# ---- Large intermediate that the dashboard does NOT need ----
+# This is the step-3 output (input to step 4 only). The dashboard (step 8) does not read it,
+# so it is left out to keep the repo smaller. Re-running step 4 regenerates it.
+# NOTE: output/processed_hourly_bike_counts_time_categories.csv.gz is deliberately NOT ignored --
+#       the dashboard's Daily Rhythm tab reads it, so it must stay committed.
+output/hamburg_bike_counts_hourly_5min_clean_v2.csv.gz
+
+# ---- Python / Jupyter noise ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

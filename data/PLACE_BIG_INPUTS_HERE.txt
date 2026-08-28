@@ -1,0 +1,17 @@
+Place the large input files in THIS folder before running notebooks 9 and 10.
+They are intentionally not included in the repository (too large; see .gitignore).
+
+Required files (exact names the notebooks expect):
+
+  summer_250701-0815_xy.csv        -> input for notebook 9  (summer window 2025-07-01 .. 08-15)
+  winter_250115-0228_xy.csv        -> input for notebook 9  (winter window 2025-01-15 .. 02-28)
+  Bike_infra_4class_4326.geojson   -> input for notebook 10 (lab-classified bike network, EPSG:4326)
+  HH_Boundary.geojson              -> input for notebook 10 (Hamburg city boundary, EPSG:4326)
+
+Notes:
+- If you only want to regenerate the dashboard (notebook 8), you do NOT need these files:
+  the small outputs of notebooks 9 and 10 are already committed under output/.
+- The summer/winter CSVs are hourly extracts pulled from the native 5-min feed.
+- Bike_infra_4class_4326.geojson carries the lab classification (class_no 1-4) per segment.
+- HH_Boundary.geojson is the Hamburg administrative boundary in WGS84 (two parts:
+  the main city area and the Neuwerk exclave).

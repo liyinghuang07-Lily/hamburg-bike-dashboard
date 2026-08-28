@@ -1,0 +1,12 @@
+# Python packages required to run notebooks 3-10
+# Install with: pip install -r requirements.txt
+# (Notebooks 0-2 have their own dependencies for the live Hamburg sensor API; not covered here.)
+
+pandas
+numpy
+astral
+holidays
+plotly
+nbformat
+shapely   # notebook 10: geometry simplification of the bike network
+ijson     # notebook 10: stream the ~90 MB network GeoJSON without loading it all into memory
